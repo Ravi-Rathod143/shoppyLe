@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { products, status } = useSelector(state => state.products);
+  const { products, status, searchTerm } = useSelector(state => state.products);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [categories, setCategories] = useState([]);
 
@@ -20,19 +20,18 @@ const Home = () => {
     }
   }, [products]);
 
-  const filteredProducts = selectedCategory === 'all' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
+  // 🧠 Main filtering logic
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+    const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   if (status === 'loading') return <div className="loading-container">Loading products...</div>;
   if (status === 'failed') return <div className="error-container">Failed to load products.</div>;
 
   return (
     <div className="home-container">
-      {/* <div className="hero-section">
-        <h1>Welcome to ShoppyGlobe</h1>
-        <p>Discover Amazing Products at Great Prices</p>
-      </div> */}
       <div className="filters-container">
         <h2>Select Category</h2>
         <div className="category-filters">
