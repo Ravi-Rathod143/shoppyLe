@@ -1369,7 +1369,7 @@ footer {
 
 .product-main-image {
   width: 100%;
-  height: 500px;
+  height: 377px;
   object-fit: contain;
   border-radius: 12px;
   transition: transform 0.3s ease;
@@ -1382,7 +1382,7 @@ footer {
 .product-info-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding-right: 1rem;
 }
 
@@ -1684,7 +1684,7 @@ footer {
 }
 
 .not-found-container h1 {
-  font-size: 8rem;
+  font-size: 3rem;
   margin: 0;
   background: linear-gradient(45deg, #3498db, #2980b9);
   -webkit-background-clip: text;
@@ -1732,7 +1732,7 @@ footer {
   }
   
   .not-found-container h1 {
-    font-size: 6rem;
+    font-size: 3rem;
   }
   
   .not-found-container h2 {
