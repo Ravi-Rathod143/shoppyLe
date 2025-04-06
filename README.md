@@ -7,7 +7,7 @@
 
 
 
-https://shopele.netlify.app/
+https://shoplejao.netlify.app/
 
 
 
