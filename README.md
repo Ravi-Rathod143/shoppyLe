@@ -32,7 +32,7 @@ ShoppyGlobe is a simple yet powerful e-commerce web application built using Reac
 https://shoplejao.netlify.app/
 
 ## github clone the repository
-https://github.com/Ravi-Rathod143/shoopyShop.git
+https://github.com/Ravi-Rathod143/shoppyLe.git
 
 ## folder
 cd Shops
